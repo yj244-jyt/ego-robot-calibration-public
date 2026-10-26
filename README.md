@@ -40,9 +40,9 @@ The player keeps Robot and Quest trajectories in the same coordinate frame and e
 
 ### Short replay animation
 
-![Existing report trajectory replay](media/trajectory.gif)
+![Existing report trajectory replay, last 10 seconds at 2x](media/trajectory.gif)
 
-This GIF is a frame-by-frame capture of the existing report player's trajectory replay. It contains derived display geometry only; no raw Robot or Quest stream is published here.
+This GIF is a frame-by-frame capture of the **last 10 seconds** of the existing report player's full trajectory, encoded at **2× playback speed**. It contains derived display geometry only; no raw Robot or Quest stream is published here.
 
 ## Mathematical reference
 
@@ -76,7 +76,7 @@ For a synchronized sample `k`:
 $$
 \begin{aligned}
 e_p(k) &= \left\|p_{\mathrm{Quest}}(k)-p_{\mathrm{Robot}}(k)\right\|_2,\\
-e_R(k) &= \operatorname{angle}\!\left(T_{\mathrm{Robot}}(k)^{-1}T_{\mathrm{Quest}}(k)\right),\\
+e_R(k) &= \mathrm{angle}\left(T_{\mathrm{Robot}}(k)^{-1}T_{\mathrm{Quest}}(k)\right),\\
 v(k) &= \frac{\left\|p(k+1)-p(k-1)\right\|_2}{t(k+1)-t(k-1)},\\
 C(t) &= \frac{N_{\mathrm{valid}}(t)}{N_{\mathrm{candidate}}(t)}.
 \end{aligned}
@@ -87,7 +87,7 @@ $$
 The uncertainty budget is first-order and explicit:
 
 $$
-\sigma_{\mathrm{total}}=\sqrt{\sigma_{\mathrm{ego}}^2+\sigma_{\mathrm{robot}}^2+(v\,\sigma_t)^2+(\ell\,\sigma_{\theta})^2+\sigma_{\mathrm{fixture}}^2+\sigma_{\mathrm{calibration}}^2}
+\sigma_{\mathrm{total}}=\sqrt{\sigma_{\mathrm{ego}}^2+\sigma_{\mathrm{robot}}^2+(v\sigma_t)^2+(\ell\sigma_{\theta})^2+\sigma_{\mathrm{fixture}}^2+\sigma_{\mathrm{calibration}}^2}
 $$
 
 The code labels these as sigma-like terms and never mixes them with empirical P95 errors.

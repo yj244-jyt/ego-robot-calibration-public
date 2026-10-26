@@ -21,7 +21,7 @@ $$
 
 $$
 e_p=\left\|p_{\mathrm{Quest}}-p_{\mathrm{Robot}}\right\|_2, \qquad
-e_R=\operatorname{angle}\!\left(T_{\mathrm{Robot}}^{-1}T_{\mathrm{Quest}}\right)
+e_R=\mathrm{angle}\left(T_{\mathrm{Robot}}^{-1}T_{\mathrm{Quest}}\right)
 $$
 
 $$
