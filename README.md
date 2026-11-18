@@ -1,5 +1,7 @@
 # ego-robot-calibration / public test walkthrough
 
+## [Open the full interactive calibration report](https://yj244-jyt.github.io/ego-robot-calibration-reports/)
+
 This is the compact public homepage for the ego-robot calibration test protocol. It reuses the existing modeling and trajectory scenes from the [report repository](https://github.com/yj244-jyt/ego-robot-calibration-reports) and exposes a small, device-independent math reference from the latest private source repository.
 
 ## Test flow
